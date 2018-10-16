@@ -1,0 +1,267 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="col-md-12">
+                <div class="card">
+                    <form method="get" action="/" class="form-horizontal">
+                        <div class="card-header card-header-text" data-background-color="blue">
+                            <h4 class="card-title">Somos comunidapp</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="dropdown">
+                                        <button href="#pablo" class="dropdown-toggle btn btn-primary btn-round btn-block" data-toggle="dropdown">Proyectos disponibles
+                                            <b class="caret"></b>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-center">
+                                            <li class="dropdown-header">Seleccione proyecto..</li>
+                                            <li *ngFor="let item of itemProyectos;">
+                                                <button type="button" class="btn btn-github btn-simple btn-wd btn-sm" (click)="SelecProyecto(item.$key)">{{(item)?.Nombre}}</button>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a [routerLink]="[urlNuevoProyecto]">Nuevo proyecto</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-10 col-lg-4">
+                                    <legend>Imagen del proyecto</legend>
+                                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                        <div class="fileinput-new thumbnail">
+                                            <img  src="{{ (item_Proyecto?item_Proyecto.URLProyecto:'../../assets/img/image_placeholder.jpg') }}" alt="...">
+                                        </div>
+                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                        <div *ngIf="item_Proyecto">
+                                            <span class="btn btn-info btn-round btn-file">
+                                                <span class="fileinput-new">Seleccionar imagen</span>
+                                                <span class="fileinput-exists">Cambiar imagen</span>
+                                                <input type="file" name="..." (change)="selectFile($event)" accept=".png,.jpg,.jpeg" />
+                                            </span>
+                                            <!-- <button type="button" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" (click)="uploadBorrar()" ><i class="fa fa-times"></i> Eliminar</button> -->
+                                            <a href="#image" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" (click)="uploadBorrar()"><i class="fa fa-times"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="currentFileUpload" class="progress" style="width:400px">
+                                        <div class="progress-bar progress-bar-info progress-bar-striped"
+                                            role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+                                            aria-valuemin="0" aria-valuemax="100"
+                                            [ngStyle]="{width:progress.percentage+'%'}">
+                                            {{progress.percentage}}%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <label class="col-sm-2 label-on-left">Nombre proyecto</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" (input)="item_Proyecto.Nombre=$event.target.value" value="{{item_Proyecto?.Nombre}}">
+                                            <span class="help-block">Ingresa el nombre del proyecto, como se presentará en las noticias.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">    
+                                    <label class="col-sm-2 label-on-left">Descripción</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" (input)="item_Proyecto.Descripcion=$event.target.value" value="{{item_Proyecto?.Descripcion}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">        
+                                    <label class="col-sm-2 label-on-left">Recursos: $</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" (input)="item_Proyecto.Recursos=$event.target.value" value="{{item_Proyecto?.Recursos}}">
+                                            <span class="help-block">Incentivo para la ejecución y finalización del proyecto.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">  
+                                    <label class="col-sm-2 label-on-left">Estado</label>
+                                    <div class="col-sm-10 checkbox-radios">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" checked="{{(item_Proyecto?.Estado=='1'?'checked':'')}}" value="1" (change)="CambioEstado($event.target.value)" [disabled]="!item_Proyecto"> Activo
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" checked="{{(item_Proyecto?.Estado=='1'?'':'checked')}}" value="0" (change)="CambioEstado(!$event.target.value)" [disabled]="!item_Proyecto"> Inactivo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer text-center">
+                                <button type="button" class="btn btn-info btn-wd btn-lg" (click)="ModificarProyecto()" [disabled]="!item_Proyecto">Modificar proyecto</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+
+
+            <!-- <div class="col-md-12">
+                <div class="card">
+                    <form method="get" action="/" class="form-horizontal">
+                        <div class="card-header card-header-text" data-background-color="rose">
+                            <h4 class="card-title">Input Variants</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Custom Checkboxes &amp; radios</label>
+                                <div class="col-sm-4 col-sm-offset-1 checkbox-radios">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Unchecked
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes" checked> Checked
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes" disabled> Disabled Unchecked
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes" checked disabled> Disabled Checked
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5 checkbox-radios">
+                          
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios"> Radio is off
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" checked="true"> Radio is on
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadiosDisabled" disabled> Disabled Radio is off
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadiosDisabled" checked="true" disabled> Disabled Radio is on
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Input with success</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating is-empty has-success">
+                                        <label class="control-label"></label>
+                                        <input type="text" class="form-control" value="Success">
+                                        <span class="material-icons form-control-feedback">done</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Input with error</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating is-empty has-error">
+                                        <label class="control-label"></label>
+                                        <input type="text" class="form-control" value="Error Input">
+                                        <span class="material-icons form-control-feedback">clear</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Column sizing</label>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="text" class="form-control" placeholder=".col-md-3">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="text" class="form-control" placeholder=".col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="text" class="form-control" placeholder=".col-md-5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="rose">
+                        <i class="material-icons">today</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Datetime Picker</h4>
+                        <div class="form-group">
+                            <label class="label-control">Datetime Picker</label>
+                            <input type="text" class="form-control datetimepicker" value="10/05/2016" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="rose">
+                        <i class="material-icons">library_books</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Datetime Picker</h4>
+                        <div class="form-group">
+                            <label class="label-control">Date Picker</label>
+                            <input type="text" class="form-control datepicker" value="10/10/2016" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="rose">
+                        <i class="material-icons">av_timer</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Datetime Picker</h4>
+                        <div class="form-group">
+                            <label class="label-control">Time Picker</label>
+                            <input type="text" class="form-control timepicker" value="14:00" />
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

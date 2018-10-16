@@ -1,0 +1,101 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <form method="get" action="/" class="form-horizontal">
+                        <div class="card-header card-header-text" data-background-color="blue">
+                            <h4 class="card-title">Somos comunidapp</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-10 col-lg-4">
+                                    <legend>Imagen del proyecto</legend>
+                                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                        <div class="fileinput-new thumbnail">
+                                            <img src="../../assets/img/image_placeholder.jpg" alt="...">
+                                        </div>
+                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                        <div>
+                                            <span class="btn btn-info btn-round btn-file">
+                                                <span class="fileinput-new">Seleccionar imagen</span>
+                                                <span class="fileinput-exists">Cambiar imagen</span>
+                                                <input type="file" name="..." (change)="selectFile($event)" accept=".png,.jpg,.jpeg" />
+                                            </span>
+                                            <!-- <button type="button" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" (click)="uploadBorrar()" ><i class="fa fa-times"></i> Eliminar</button> -->
+                                            <a href="#image" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" (click)="uploadBorrar()"><i class="fa fa-times"></i> Eliminar</a>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="currentFileUpload" class="progress" style="width:400px">
+                                        <div class="progress-bar progress-bar-info progress-bar-striped"
+                                            role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+                                            aria-valuemin="0" aria-valuemax="100"
+                                            [ngStyle]="{width:progress.percentage+'%'}">
+                                            {{progress.percentage}}%</div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">
+                                    <label class="col-sm-2 label-on-left">Nombre proyecto</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" (input)="txtNombre=$event.target.value">
+                                            <span class="help-block">Ingresa el nombre del proyecto, como se presentará en las noticias.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">    
+                                    <label class="col-sm-2 label-on-left">Descripción</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" (input)="txtDescripcion=$event.target.value">
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">        
+                                    <label class="col-sm-2 label-on-left">Recursos: $</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <input type="text" class="form-control" (input)="txtRecursos=$event.target.value">
+                                            <span class="help-block">Incentivo para la ejecución y finalización del proyecto.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="row"> -->
+                                <div class="col-md-8 col-sm-12">  
+                                    <label class="col-sm-2 label-on-left">Estado</label>
+                                    <div class="col-sm-10 checkbox-radios">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" checked="true" disabled (input)="chEstado=$event.target.checked"> Activo
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" disabled> Inactivo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer text-center">
+                                <button type="button" class="btn btn-info btn-wd btn-lg" (click)="CrearProyecto()" [disabled]="!selectedFiles">Crear proyecto</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "app_Front",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

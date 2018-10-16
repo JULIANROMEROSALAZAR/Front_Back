@@ -1,0 +1,15 @@
+<ion-app>
+  <div class="wrapper">
+    <div *ngIf="isSecurity()" class="sidebar" data-active-color="white" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+        <sidebar-cmp></sidebar-cmp>
+        <div class="sidebar-background" style="background-image: url(assets/img/sidebar-1.jpg)"></div>
+    </div>
+    <div class="main-panel main-panel-security">
+        <navbar-cmp *ngIf="isSecurity()"></navbar-cmp>
+        <dashboard-cmp></dashboard-cmp>
+        <div *ngIf="isSecurity()">
+            <footer-cmp></footer-cmp>
+        </div>
+    </div>
+  </div>  
+</ion-app>
