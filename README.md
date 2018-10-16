@@ -1,52 +1,52 @@
 # Proyecto: Comunidapp
-AplicaciÛn multiplataforma que permita crear lazos m·s estrechos entre las universidades y la comunidad en la Localidad de la Candelaria.
+Aplicaci√≥n multiplataforma que permita crear lazos m√°s estrechos entre las universidades y la comunidad en la Localidad de la Candelaria.
 
 
-# SituaciÛn 
-La situaciÛn de la localidad parte de que miles de estudiantes que provienen de otras partes de la ciudad visitan a diario el territorio haciendo uso del espacio p˙blico, pero la comunidad percibe que aquellos visitantes no dejan algo positivo aparte del consumo de servicios y productos en el sector. 
+# Situaci√≥n 
+La situaci√≥n de la localidad parte de que miles de estudiantes que provienen de otras partes de la ciudad visitan a diario el territorio haciendo uso del espacio p√∫blico, pero la comunidad percibe que aquellos visitantes no dejan algo positivo aparte del consumo de servicios y productos en el sector. 
 
-# Oportunidad/Problem·tica 
+# Oportunidad/Problematica 
 La oportunidad puede nacer en aprovechar el conocimiento y capacidades de los estudiantes de las instituciones educativas para generar proyectos sociales que generen cambios significativos en la estructura social del territorio. 
 
 # Expectativa/Alcance 
 
-La expectativa de los habitantes se basa en promover una interacciÛn recÌproca que busque otorgarle valor a la localidad. Los jÛvenes estudiantes podrÌan apadrinar a niÒos que necesiten capacitarse en alg˙n tema escolar especÌfico o tambiÈn podrÌan ayudar a fortalecer las habilidades comerciales de los vendedores locales.
+La expectativa de los habitantes se basa en promover una interacci√≥n rec√≠proca que busque otorgarle valor a la localidad. Los j√≥venes estudiantes podr√≠an apadrinar a ni√±os que necesiten capacitarse en alg√∫n tema escolar espec√≠fico o tambi√©n podr√≠an ayudar a fortalecer las habilidades comerciales de los vendedores locales.
 
 ---
 # Arquitectura - Firebase & Angular & IONIC
 
-> [Autoria:] JULIAN ALEXANDER ROMERO SALAZAR - BOGOT¡ / COLOMBIA.
+> [Autoria:] JULIAN ALEXANDER ROMERO SALAZAR - BOGOT√Å / COLOMBIA.
 
 ## Objetivo General
-Desarrollar una aplicaciÛn multiplataforma en el curso FULLSTACK, que permita crear lazos m·s estrechos entre las universidades y la comunidad en la Localidad de la Candelaria. Mediante un sistema que permitir· a la comunidad registrar proyectos sociales y a los universitarios de la localidad generar dos tipos de aportes (comentarios avanzados o participar en soluciÛn de necesidad).
+Desarrollar una aplicaci√≥n multiplataforma en el curso FULLSTACK, que permita crear lazos m√°s estrechos entre las universidades y la comunidad en la Localidad de la Candelaria. Mediante un sistema que permitir√° a la comunidad registrar proyectos sociales y a los universitarios de la localidad generar dos tipos de aportes (comentarios avanzados o participar en soluci√≥n de necesidad).
 
 
-### Objetivos especÌficos
-[ï]	Aprovechar el conocimiento y capacidades de los estudiantes de las instituciones universitarias para resolver proyectos sociales de la comunidad.
-[ï]	Fomentar la participaciÛn estudiantil hacia proyectos sociales.
-[ï]	Incentivar a los jÛvenes estudiantes por sus aportes en proyectos sociales.
-[ï]	DiseÒar una aplicaciÛn multiplataforma que permita resolver necesidades que presenta la comunidad de la candelaria en la ciudad de Bogot·.
+### Objetivos espec√≠ficos
+[*]	Aprovechar el conocimiento y capacidades de los estudiantes de las instituciones universitarias para resolver proyectos sociales de la comunidad.
+[*]	Fomentar la participaci√≥n estudiantil hacia proyectos sociales.
+[*]	Incentivar a los j√≥venes estudiantes por sus aportes en proyectos sociales.
+[*]	Dise√±ar una aplicaci√≥n multiplataforma que permita resolver necesidades que presenta la comunidad de la candelaria en la ciudad de Bogot√°.
 
 
 ### Actores
-[ï]	La AlcaldÌa Local 
-[ï]	Las Universidades 
-[ï]	Mintic 
-[ï]	La Comunidad
+[*]	La Alcald√≠a Local 
+[*]	Las Universidades 
+[*]	Mintic 
+[*]	La Comunidad
 
 
-### Car·cter del proyecto
+### Car√°cter del proyecto
 
-[ï]	El proyecto tiene dos componentes mayores:
-    o	[Vinculo que permite la interacciÛn entre los universitarios y la comunidad.]
-    o	[AcciÛn y seguimiento de resultados.]
+[*]	El proyecto tiene dos componentes mayores:
+    o	[Vinculo que permite la interacci√≥n entre los universitarios y la comunidad.]
+    o	[Acci√≥n y seguimiento de resultados.]
 
 	
-## DescripciÛn del proyecto
+## Descripci√≥n del proyecto
 
-Con este proyecto se pretende solucionar la situaciÛn de la localidad; miles de estudiantes que provienen de otras partes de la ciudad visitan a diario el territorio haciendo uso del espacio p˙blico, pero la comunidad percibe que aquellos visitantes no dejan algo positivo aparte del consumo de servicios y productos en el sector. La estrategia es diseÒar un sistema que permita crear vÌnculos m·s cercanos entre las Universidades y la Comunidad, involucrando la formaciÛn socio-cultural y el desarrollo de los jÛvenes.
-Dicho sistema permitir· a la comunidad registrar sus necesidades y permitir· a los universitarios de la localidad, generar diferentes tipos de aportes sobre las necesidades expuestas.
+Con este proyecto se pretende solucionar la situaci√≥n de la localidad; miles de estudiantes que provienen de otras partes de la ciudad visitan a diario el territorio haciendo uso del espacio p√∫blico, pero la comunidad percibe que aquellos visitantes no dejan algo positivo aparte del consumo de servicios y productos en el sector. La estrategia es dise√±ar un sistema que permita crear v√≠nculos m√°s cercanos entre las Universidades y la Comunidad, involucrando la formaci√≥n socio-cultural y el desarrollo de los j√≥venes.
+Dicho sistema permitir√° a la comunidad registrar sus necesidades y permitir√° a los universitarios de la localidad, generar diferentes tipos de aportes sobre las necesidades expuestas.
 Tipo de aportes:
 *	[Comentarios avanzados.]
-*	[SoluciÛn de la necesidad.]
-Finalmente, el sistema permitir· generar acciÛn y seguimiento de los resultados.
+*	[Soluci√≥n de la necesidad.]
+Finalmente, el sistema permitir√° generar acci√≥n y seguimiento de los resultados.
