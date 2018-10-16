@@ -22,24 +22,24 @@ Desarrollar una aplicación multiplataforma en el curso FULLSTACK, que permita c
 
 
 ### Objetivos específicos
-[*]	Aprovechar el conocimiento y capacidades de los estudiantes de las instituciones universitarias para resolver proyectos sociales de la comunidad.
-[*]	Fomentar la participación estudiantil hacia proyectos sociales.
-[*]	Incentivar a los jóvenes estudiantes por sus aportes en proyectos sociales.
-[*]	Diseñar una aplicación multiplataforma que permita resolver necesidades que presenta la comunidad de la candelaria en la ciudad de Bogotá.
+*	Aprovechar el conocimiento y capacidades de los estudiantes de las instituciones universitarias para resolver proyectos sociales de la comunidad.
+*	Fomentar la participación estudiantil hacia proyectos sociales.
+*	Incentivar a los jóvenes estudiantes por sus aportes en proyectos sociales.
+*	Diseñar una aplicación multiplataforma que permita resolver necesidades que presenta la comunidad de la candelaria en la ciudad de Bogotá.
 
 
 ### Actores
-[*]	La Alcaldía Local 
-[*]	Las Universidades 
-[*]	Mintic 
-[*]	La Comunidad
+*	La Alcaldía Local 
+*	Las Universidades 
+*	Mintic 
+*	La Comunidad
 
 
 ### Carácter del proyecto
 
-[*]	El proyecto tiene dos componentes mayores:
-    o	[Vinculo que permite la interacción entre los universitarios y la comunidad.]
-    o	[Acción y seguimiento de resultados.]
+*	El proyecto tiene dos componentes mayores:
+    +	[Vinculo que permite la interacción entre los universitarios y la comunidad.]
+    +	[Acción y seguimiento de resultados.]
 
 	
 ## Descripción del proyecto
